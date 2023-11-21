@@ -17,6 +17,8 @@ let age = 18
 let isLoggedIn = false
 let state;
 
+
+//primitive datatypes
 // number => 2 to power 53
 // bigint
 // string => ""
@@ -24,9 +26,12 @@ let state;
 // null => standalone value
 // undefined => 
 // symbol => unique
+// NaN => Not a number , sometime while converting string to number , if the string isn't converted in number properly then it stores NaN 
 
 
-// object
+// Reference datatypes
+// Array , object , functions 
+
 
 console.log(typeof undefined); // undefined
 console.log(typeof null); // object

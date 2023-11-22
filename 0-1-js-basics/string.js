@@ -5,7 +5,7 @@ let str2 = new String("Debabrata")
 console.table([str1 , typeof str1 ,  str2  , typeof str2 ])
 console.log(str2);
 
-console.log(str1.charAt(3));
+console.log(str1.charAt(3)); // doesn't work with -ve value
 console.log(str1.indexOf('f')); // its case sensitive , searches for the string and returns the first occurance , and if not found return -1
 
 console.log(str1.toLowerCase());
@@ -33,3 +33,8 @@ console.log(str1.italics())
 
 console.log(str1.trim().endsWith('A')); // case sensitive , checks either the string endswith certain characters , return true or false
 console.log(str1.trim().startsWith('d')); // case sensitve , checks at the begining of the string 
+
+str1 = 'Debabrata Bar'
+console.log(str1.trim().at(-1));// works with -ve value , -ve index starts in reverse order
+console.log(str1.trim().charAt(-1)); // doesn't work with -ve value
+

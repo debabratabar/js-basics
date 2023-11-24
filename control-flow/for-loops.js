@@ -58,8 +58,17 @@ arr.forEach((item) => { // using arrow function
 })
 
 let sum =0
-arr.forEach((item) =>{
-    sum+=item
-} )
+// let var1 = arr.forEach((item) =>{
+//     sum+=item
+// } )
 
+arr.forEach((item) =>{
+        sum+=item
+    } )
+ 
+// console.log(typeof var1); // foreach loop doesn't retuen anything 
+ 
 console.log(`sum of [${arr}] is ${sum} `);
+
+
+arr.forEach( (item , index ,arr ) => ( console.log(`${item} , ${index} , ${arr}`)))  // item , index ,arr <= these are the parameters of forEach() method

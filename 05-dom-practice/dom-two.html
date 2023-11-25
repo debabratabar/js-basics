@@ -63,9 +63,13 @@
     divEle.style.padding='5px'
 
     divEle.setAttribute('title','divtag')
+    // divEle.innerHTML='<h1>We are adding div tag from JS</h1>' // We can add the Html code using innerHTML property
 
-    const divText = document.createTextNode("We are adding div tag from JS")
-    divEle.appendChild(divText)
+    const h1tag = document.createElement('h1')
+    h1tag.textContent="We are adding div tag from JS"
+
+    // const divText = document.crea("<h1>We are adding div tag from JS</h1>")
+    divEle.appendChild(h1tag)
     document.body.appendChild(divEle)
 
     

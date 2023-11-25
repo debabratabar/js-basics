@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Practice 2 </title>
+    <style>
+        body{
+            background-color: rgb(0, 0, 0);
+        }
+        #heading , .child{
+            font-size:30px;
+            color: rgb(80, 210, 80);
+        }
+    </style>
+   
+</head>
+<body>
+    <h2 id="heading"> Chai Aur Code , Episode 34 , Learning DOM </h2>
+
+    <div class="parent">
+        <div class="child">child1</div>
+        <div class="child">child2</div>
+        <div class="child">child3</div>
+    </div>
+
+    
+</body>
+
+<script>
+    
+    // parent , child tag precessing
+    let parentTag = document.querySelector('.parent') 
+    console.log(parentTag.children[0]);
+    console.log(typeof parentTag); // returns a Object 
+
+    let parentArr = Array.from(parentTag.children)
+    console.log(parentArr);
+
+    parentArr.map( (li) => {
+        return li.id='li' ;
+    })
+
+    // parentArr.forEach( (li) => {
+    //     console.log(li);
+    // })
+
+    for( let i=0; i< parentTag.children.length;i++)        {
+        console.log(parentTag.children[i].textContent);
+    }
+    
+    console.log(parentTag.lastElementChild.textContent);
+    console.log(parentTag.firstElementChild.textContent);
+
+
+    const divEle = document.createElement('div')
+    // console.log(divEle);
+    divEle.className='firstdiv'
+    divEle.id='firstdivID'
+    divEle.style.border='5px solid yellow'
+    divEle.style.color= 'Red';
+    divEle.style.font='10px';
+    divEle.style.padding='5px'
+
+    divEle.setAttribute('title','divtag')
+
+    const divText = document.createTextNode("We are adding div tag from JS")
+    divEle.appendChild(divText)
+    document.body.appendChild(divEle)
+
+    
+
+</script>
+</html>

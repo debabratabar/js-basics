@@ -41,7 +41,10 @@
     }
     function editElements() { // editing any Existing Element
         const editEle = document.querySelector('li:first-child')
-        editEle.replaceWith(document.createElement('li').innerHTML('C-plas-plus'))
+        const newEle= document.createElement('li')
+        newEle.innerHTML='c-plus-plus'
+        console.log(newEle);
+        editEle.replaceWith(newEle)
     }
 
     let newLangs = ['JAVA' , 'TypeScript' , 'Python']
@@ -55,6 +58,8 @@
 
 
     removeElements() // removing first elements 
+    editElements()//editing an existing Elements
+
 
 
 </script>

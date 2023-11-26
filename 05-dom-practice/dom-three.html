@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai Aur Code | DOM Learning </title>
+</head>
+
+<body style="background-color: #212121; color:green; font-size: larger;">
+    <ul class="language" >
+        <li >Javascript</li>
+    </ul>
+
+</body>
+<script>
+    function addElements(LangName) { // adding new Element
+        const newEle = document.createElement('li')
+        const parentEle = document.querySelector('.language')
+        newEle.appendChild(document.createTextNode(`${LangName}`))
+        // console.log(newEle);
+        parentEle.appendChild(newEle)
+        
+        // document.querySelector('.language').appendChild(newEle)
+
+
+    }
+
+    function addLanguageOpti(langName){ // optimised way of adding Element
+        const li = document.createElement('li');
+        li.innerHTML = `${langName}`
+        document.querySelector('.language').appendChild(li)
+    }
+    
+
+    function removeElements() { // removing any Element
+            const removeEle= document.querySelector('li:first-child')
+            // console.log(removeEle);
+            removeEle.remove();
+
+    }
+    function editElements() { // editing any Existing Element
+        const editEle = document.querySelector('li:first-child')
+        editEle.replaceWith(document.createElement('li').innerHTML('C-plas-plus'))
+    }
+
+    let newLangs = ['JAVA' , 'TypeScript' , 'Python']
+    // console.log(newLangs);
+
+    for ( langs of newLangs){
+        // console.log(langs);
+        // addElements(langs)
+        addLanguageOpti(langs)
+    }
+
+
+    removeElements() // removing first elements 
+
+
+</script>
+
+</html>

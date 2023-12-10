@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Example</title>
+</head>
+
+<body style="background-color: black; color: aliceblue;">
+    <h2>Start should change the background color Every second</h2>
+    <button id="start" style="height: 50px; width: 50px;">start</button>
+    <button id="stop" style="height: 50px; width: 50px;">stop</button>
+</body>
+<script>
+    let color = ['#65B741', '#F7B787', '#FFE382', '#5C8374', '#9EC8B9']
+    let i=0
+    let colorChage;
+    let startButton = document.querySelector('#start')
+    let stopButton = document.querySelector('#stop')
+    startButton.addEventListener('click', function () {
+         colorChage= setInterval(function () {
+            if (i == 4) {
+                i = 0
+            }
+            document.body.style.backgroundColor = color[i++]
+        }, 1000)
+    })
+
+    stopButton.addEventListener('click', function () {
+        clearInterval(colorChage)
+        colorChage=null;
+    })
+</script>
+
+</html>

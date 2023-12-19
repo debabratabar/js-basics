@@ -46,7 +46,7 @@ let promiseThree = new Promise( (resolve , reject)=>{
         resolve({user:"debabratabar" , repoCount: 17}) // passing value when Promise resolved  
         }
         else{
-            reject('404 ! Not Found') // passing value when Promise rejected 
+            reject('404 !! Not Found') // passing value when Promise rejected 
         }
     } ,  2000)
 })
@@ -70,7 +70,8 @@ Promise.all(promiceArr) // it takes a arr of promises and returnes a promise and
 })
 .catch( (error) => {
     console.log("Error");
-    process.on('unhandledRejection' , (reason, promise) =>  {
-        console.error(`Rejected Promise : ${promise}` );
-    })
+    // process.on('unhandledRejection' , (reason, promise) =>  {
+    //     console.error(`Rejected Promise : ${promise}` );
+    // })
+    console.log(error);
 })
